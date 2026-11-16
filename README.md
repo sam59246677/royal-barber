@@ -1,30 +1,30 @@
 # Royal Barber 💈
 
-A full-stack barber shop management and appointment booking application built with React, TypeScript, Node.js, Express, and PostgreSQL.
+A full-stack barber shop management and appointment booking application built with **React, TypeScript, Node.js, Express, and PostgreSQL**.
 
-Royal Barber provides an online appointment booking experience for customers and separate management dashboards for administrators and barbers.
+Royal Barber provides customers with an online appointment booking experience and offers separate management dashboards for administrators and barbers.
 
 ## Features
 
 ### Customer
-- Browse barber services and prices
+- Browse available barber services and prices
 - View available barbers
 - Book appointments without creating an account
-- Select appointment date and time
-- Submit booking information with form validation
+- Select appointment dates and time slots
+- Submit booking details with form validation
 
 ### Admin
 - Secure authentication and role-based access control
-- Manage services, prices, durations, and availability
+- Create, update, and manage barber services
 - Manage barbers and their active status
 - View and manage all appointments
 - Manage staff accounts
 
 ### Barber
-- Secure barber login
-- View only their own appointments
-- Complete or cancel eligible appointments
-- Update appointment status
+- Secure barber authentication
+- View personal appointments only
+- Manage eligible appointments
+- Update appointment statuses
 
 ### Security
 - Password hashing with bcrypt
@@ -64,7 +64,7 @@ Royal Barber provides an online appointment booking experience for customers and
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/YOUR_USERNAME/royal-barber.git
+   git clone https://github.com/sam59246677/royal-barber.git
    cd royal-barber
    ```
 
@@ -74,7 +74,7 @@ Royal Barber provides an online appointment booking experience for customers and
    npm install
    ```
 
-3. Create a `.env` file in the project root based on the environment variables required by the application.
+3. Create a `.env` file using `.env.example` as a reference.
 
 4. Configure your PostgreSQL database and create the required tables.
 
@@ -84,7 +84,7 @@ Royal Barber provides an online appointment booking experience for customers and
    node server/express-app.js
    ```
 
-6. Start the frontend development server in another terminal:
+6. Open another terminal and start the frontend:
 
    ```bash
    npm run dev
@@ -92,31 +92,28 @@ Royal Barber provides an online appointment booking experience for customers and
 
 ## Environment Variables
 
-Configure the following variables in your local `.env` file:
+Configure the required environment variables in your local `.env` file.
 
-- `DB_HOST`
-- `DB_PORT`
-- `DB_NAME`
-- `DB_USER`
-- `DB_PASSWORD`
-- `SESSION_SECRET`
-- `NODE_ENV`
+Refer to `.env.example` for the variable names and configuration format.
 
 Never commit your `.env` file or expose real credentials.
 
-## Build
+## Production Build
+
+To create a production build of the frontend:
 
 ```bash
 npm run build
 ```
 
-## Notes
+## Project Notes
 
-- Customer booking does not require an account.
-- Admin and barber dashboards require authentication.
-- The backend uses PostgreSQL for persistent data storage.
-- This repository contains the application source code; database setup and deployment configuration are required before production use.
+- Customers can book appointments without creating an account.
+- Administrators have access to all appointments and management features.
+- Barbers can access only their own appointments.
+- PostgreSQL is used for persistent data storage.
+- Database configuration and deployment are required before production use.
 
 ## License
 
-This project is available for portfolio and educational purposes.
+This project is intended for portfolio and educational purposes.
