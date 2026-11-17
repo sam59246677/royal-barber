@@ -36,7 +36,7 @@ Royal Barber provides customers with an online appointment booking experience an
 
 ## Tech Stack
 
-**Frontend**
+### Frontend
 - React
 - TypeScript
 - Vite
@@ -44,7 +44,7 @@ Royal Barber provides customers with an online appointment booking experience an
 - React Router
 - Lucide React
 
-**Backend**
+### Backend
 - Node.js
 - Express
 - PostgreSQL
@@ -76,19 +76,37 @@ Royal Barber provides customers with an online appointment booking experience an
 
 3. Create a `.env` file using `.env.example` as a reference.
 
-4. Configure your PostgreSQL database and create the required tables.
+4. Configure your PostgreSQL database and environment variables.
 
-5. Start the backend server:
+### Development
 
-   ```bash
-   node server/express-app.js
-   ```
+Start the backend:
 
-6. Open another terminal and start the frontend:
+```bash
+node server/express-app.js
+```
 
-   ```bash
-   npm run dev
-   ```
+Start the frontend in another terminal:
+
+```bash
+npm run dev
+```
+
+### Production
+
+Build the frontend:
+
+```bash
+npm run build
+```
+
+Start the Express server:
+
+```bash
+npm start
+```
+
+In production, Express serves the built frontend and handles API requests.
 
 ## Environment Variables
 
@@ -98,22 +116,10 @@ Refer to `.env.example` for the variable names and configuration format.
 
 Never commit your `.env` file or expose real credentials.
 
-## Production Build
-
-To create a production build of the frontend:
-
-```bash
-npm run build
-```
-
 ## Project Notes
 
 - Customers can book appointments without creating an account.
 - Administrators have access to all appointments and management features.
 - Barbers can access only their own appointments.
 - PostgreSQL is used for persistent data storage.
-- Database configuration and deployment are required before production use.
-
-## License
-
-This project is intended for portfolio and educational purposes.
+- Production
